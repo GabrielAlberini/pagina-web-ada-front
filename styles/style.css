@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+/* start custom styles for components */
+
+header, .proyectos, .contacto, footer {
+  padding: 20px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+label, input, textarea, button {
+  display: block;
+}
+
+/* end custom styles for components */
+
+header {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  width: 90px;
+}
+
+header ul {
+  display: flex;
+  gap: 10px;
+}
+
+header ul li {
+  cursor: pointer;
+}
+
+header input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(108, 105, 105);
+}
+
+main {
+  background-color: violet;
+}
+
+main .banner {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png");
+  color: white;
+  filter: grayscale(1);
+}
+
+.proyectos {
+  text-align: center;
+}
+
+.cont-cards {
+  display: grid; /*como grilla -> filas y columnas*/
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.proyectos h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.card {
+  background-color: tomato;
+  padding: 20px;
+  border-radius: 10px;
+  width: 310px;
+  justify-self: center;
+}
+
+.card .cont-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3, .card img, .card p {
+  padding-bottom: 10px;
+}
+
+.contacto {
+  background-color: steelblue;
+}
+
+.contacto h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.contacto form {
+  width: 400px;
+  padding: 10px;
+  margin: auto;
+}
+
+.contacto form input, .contacto form textarea {
+  background-color: white;
+  border: 1px solid rgb(108, 105, 105);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.contacto form * {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.contacto form button{
+  width: auto;
+}
+
+footer {
+  background-color: wheat;
+}
+
+.cont-footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.cont-footer div {
+  width: 150px;
+}
+
+.cont-footer div h4 {
+  padding-bottom: 10px;
+}
+
+.cont-footer div h5 {
+  padding-bottom: 10px;
+}
+
+.cont-footer-copyrigth{ 
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Media querie para tablet */
+@media (max-width:880px) {
+  .cont-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cont-footer {
+    flex-direction: column;
+  }
+
+  .cont-footer div {
+    width: 100%;
+    text-align: center;
+  }
+  .contacto form {
+    width: 100%;
+  }
+}
+
+/* Media querie para celular */
+@media (max-width:480px) {
+  .cont-cards {
+    grid-template-columns: 1fr;
+  }
+}
